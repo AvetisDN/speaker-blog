@@ -1,0 +1,21 @@
+{
+  "name": "speaker-blog",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.61.0",
+    "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "aos": "^2.3.4",
+    "axios": "^1.3.5",
+    "boxicons": "^2.1.4"
+  }
+}

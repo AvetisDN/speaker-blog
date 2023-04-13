@@ -1,0 +1,19 @@
+main {
+  padding: $gap $gap $gap 0;
+  flex-grow: 1;
+  max-width: calc(100% - 64px);
+  @media (min-width: $tablet) {
+    max-width: calc(100% - 280px);
+  }
+  .content {
+    min-height: 100%;
+    max-width: 100%;
+    border-radius: 0.5 * $gap;
+    @include flex-col;
+    .glide {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

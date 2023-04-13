@@ -1,0 +1,7 @@
+@use "sass:math";
+
+@for $i from 6 through 1 {
+  h#{$i} {
+    font-size: $rem * math.log(8.718 - $i);
+  }
+}

@@ -1,0 +1,49 @@
+@use "sass:color";
+.product {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $gap;
+  &-card {
+    background-color: $darker;
+    padding: $gap;
+    border-radius: calc($gap / 2);
+    @include flex-col;
+    &__category {
+      color: color.scale($color: $light, $lightness: -50%);
+    }
+    img {
+      @include fitted-image(240px);
+    }
+    h4 {
+      a {
+        color: $primary;
+      }
+    }
+    .prices {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.25rem;
+      font-weight: 600;
+      &-old-price {
+        font-weight: 400;
+        font-size: 1rem;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: calc(100% + 14px);
+          height: 6px;
+          background-color: color.scale($primary, $alpha: -35%);
+          left: -7px;
+          top: calc(50% - 3px);
+          transform: rotate(-10deg);
+        }
+      }
+      &-current-price {
+        flex-grow: 1;
+        text-align: right;
+      }
+    }
+  }
+}

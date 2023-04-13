@@ -1,0 +1,79 @@
+$fontFamily: "Montserrat", sans-serif;
+$gap: 16px;
+$rem: 16px;
+
+$zinc: (
+  "100": #f4f4f5,
+  "200": #e4e4e7,
+  "300": #d4d4d8,
+  "800": #27272a,
+  "900": #18181b,
+  "950": #09090b,
+);
+
+$purple: (
+  "400": #f472b6,
+  "500": #ec4899,
+  "600": #db2777,
+);
+
+$sky: (
+  "400": #38bdf8,
+  "500": #0ea5e9,
+  "600": #0284c7,
+);
+
+$tablet: 800px;
+$desktop: 1200px;
+
+$primary: map-get(
+  $map: $purple,
+  $key: "500",
+);
+$primary-light: map-get(
+  $map: $purple,
+  $key: "400",
+);
+$primary-dark: map-get(
+  $map: $purple,
+  $key: "600",
+);
+
+$secondary: map-get(
+  $map: $sky,
+  $key: "500",
+);
+$secondary-light: map-get(
+  $map: $sky,
+  $key: "400",
+);
+$secondary-dark: map-get(
+  $map: $sky,
+  $key: "600",
+);
+
+$dark: map-get(
+  $map: $zinc,
+  $key: "800",
+);
+$darker: map-get(
+  $map: $zinc,
+  $key: "900",
+);
+$darkest: map-get(
+  $map: $zinc,
+  $key: "950",
+);
+
+$light: map-get(
+  $map: $zinc,
+  $key: "300",
+);
+$lighter: map-get(
+  $map: $zinc,
+  $key: "200",
+);
+$lightest: map-get(
+  $map: $zinc,
+  $key: "100",
+);

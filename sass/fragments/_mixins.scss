@@ -1,0 +1,18 @@
+@mixin flex-col($gap-size: $gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-size;
+}
+@mixin flex-centered($gap-size: $gap) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap-size;
+}
+
+@mixin fitted-image($h: 200px, $w: 100%) {
+  height: $h;
+  width: $w;
+  object-fit: cover;
+  object-position: center;
+}

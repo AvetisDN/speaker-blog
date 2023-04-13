@@ -1,0 +1,41 @@
+:root {
+  font-family: $fontFamily;
+  font-size: $rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button,
+a {
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  background-color: transparent;
+  box-shadow: none;
+  transition: 0.3s ease;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+a {
+  color: $secondary-light;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}

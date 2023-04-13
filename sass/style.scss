@@ -1,0 +1,26 @@
+@import "./fragments/import";
+@import "./fragments/vars";
+@import "./fragments/mixins";
+@import "./fragments/reboot";
+@import "./fragments/typography";
+@import "./components/sidebar";
+@import "./components/content";
+@import "./components/products";
+@import "./components/buttons";
+
+body {
+  background-color: $darkest;
+  color: $lightest;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  position: relative;
+  gap: $gap;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.icon svg,
+.icon path {
+  fill: currentColor !important;
+}

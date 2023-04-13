@@ -1,0 +1,93 @@
+.sidebar {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  @include flex-col(2 * $gap);
+  height: 100vh;
+  background-color: $primary;
+  color: $darkest;
+  padding: 0.5 * $gap;
+  @media (min-width: $tablet) {
+    width: 280px;
+  }
+  a,
+  button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5 * $gap;
+    color: $lightest;
+    font-size: 2rem;
+    padding: 0.25 * $gap;
+    border-radius: 0.25 * $gap;
+    &:hover,
+    &.active {
+      background-color: $darkest;
+    }
+    @media (min-width: $tablet) {
+      justify-content: flex-start;
+      padding: 0.5 * $gap $gap;
+      font-size: 1.5 * $gap;
+    }
+    &.logo {
+      font-size: 2rem;
+      font-weight: 800;
+      color: $darkest;
+      @media (min-width: $tablet) {
+        font-size: 2.25 * $gap;
+        padding-right: 1.25 * $gap;
+      }
+      i {
+        font-size: 2.5rem;
+      }
+    }
+    span {
+      display: none;
+      @media (min-width: $tablet) {
+        display: block;
+      }
+    }
+    .underlay {
+      display: none;
+      position: fixed;
+      background-color: transparent;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      &.open {
+        display: block;
+      }
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color: $primary-dark;
+      top: 0;
+      left: 100%;
+      padding: $gap;
+      border-radius: calc($gap / 4);
+      @media (min-width: $tablet) {
+        left: calc(100% - $gap);
+      }
+      a {
+        font-size: 1rem;
+        white-space: nowrap;
+        text-transform: capitalize;
+        justify-content: flex-start;
+      }
+      &.open {
+        @include flex-col(calc($gap / 4));
+      }
+    }
+  }
+  .nav {
+    @include flex-col;
+    align-items: center;
+    @media (min-width: $tablet) {
+      align-items: stretch;
+      gap: 0.5 * $gap;
+    }
+  }
+}
