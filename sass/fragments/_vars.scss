@@ -16,6 +16,11 @@ $purple: (
   "500": #ec4899,
   "600": #db2777,
 );
+$emerald: (
+  "400": #34d399,
+  "500": #10b981,
+  "600": #059669,
+);
 
 $sky: (
   "400": #38bdf8,
@@ -27,15 +32,15 @@ $tablet: 800px;
 $desktop: 1200px;
 
 $primary: map-get(
-  $map: $purple,
+  $map: $emerald,
   $key: "500",
 );
 $primary-light: map-get(
-  $map: $purple,
+  $map: $emerald,
   $key: "400",
 );
 $primary-dark: map-get(
-  $map: $purple,
+  $map: $emerald,
   $key: "600",
 );
 
@@ -76,4 +81,9 @@ $lighter: map-get(
 $lightest: map-get(
   $map: $zinc,
   $key: "100",
+);
+
+$error: map-get(
+  $map: $purple,
+  $key: "500",
 );

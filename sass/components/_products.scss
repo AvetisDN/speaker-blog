@@ -10,16 +10,18 @@
     @include flex-col;
     &__category {
       color: color.scale($color: $light, $lightness: -50%);
+      text-transform: capitalize;
     }
     img {
       @include fitted-image(240px);
     }
     h4 {
       a {
-        color: $primary;
+        color: $light;
       }
     }
     .prices {
+      margin-top: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -34,7 +36,7 @@
           position: absolute;
           width: calc(100% + 14px);
           height: 6px;
-          background-color: color.scale($primary, $alpha: -35%);
+          background-color: color.scale($error, $alpha: -35%);
           left: -7px;
           top: calc(50% - 3px);
           transform: rotate(-10deg);

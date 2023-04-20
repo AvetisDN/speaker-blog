@@ -7,6 +7,8 @@ import {
   categoriesList,
   categoriesUnderlay,
 } from "./src/elements";
+import fetchHomepageProducts from "./src/fetchHomepageProducts";
+import fetchSingleProduct from "./src/fetchSingleProduct";
 
 new Glide(".glide").mount();
 
@@ -21,3 +23,30 @@ categoriesButton.onclick = (event) => {
 };
 
 fetchCategories();
+
+fetchHomepageProducts().then(() => {
+  const productCards = document.querySelectorAll(".product-card");
+  productCards.forEach((card) => {
+    card.onclick = (event) => {
+      event.preventDefault();
+      let href = event.target.href;
+      let lastSlashIndex = href.lastIndexOf("/");
+      let id = href.substr(lastSlashIndex + 1);
+      fetchSingleProduct(id).then(() => {
+        const bigImage = document.querySelector("#modal-big-image");
+        const smallImages = document.querySelectorAll(
+          ".modal-gallery__grid img"
+        );
+        smallImages.forEach((img) => {
+          img.onclick = (event) => {
+            document
+              .querySelector(".modal-gallery__grid img.active")
+              .classList.remove("active");
+            event.target.classList.add("active");
+            bigImage.src = event.target.src;
+          };
+        });
+      });
+    };
+  });
+});

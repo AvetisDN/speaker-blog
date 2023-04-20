@@ -4,7 +4,7 @@
   top: 0;
   @include flex-col(2 * $gap);
   height: 100vh;
-  background-color: $primary;
+  background-color: $dark;
   color: $darkest;
   padding: 0.5 * $gap;
   @media (min-width: $tablet) {
@@ -33,7 +33,10 @@
     &.logo {
       font-size: 2rem;
       font-weight: 800;
-      color: $darkest;
+      color: $lightest;
+      &:hover {
+        background-color: transparent;
+      }
       @media (min-width: $tablet) {
         font-size: 2.25 * $gap;
         padding-right: 1.25 * $gap;
